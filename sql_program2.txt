@@ -1,0 +1,25 @@
+CREATE DATABASE SURYA;
+USE SURYA;
+
+create table employee
+(
+empid int not null primary key identity(2002100,2),
+name varchar(20) not null,
+email varchar(30)
+);
+select * from employee;
+insert into employee(name,email) values('vinod','vinod@gmail.com'),('bahadur','bahadur@gmail.com'),('thapa','thapa@gmail.com'),('coder','coder@gmail.com');
+
+
+create table product
+(
+pid int not null primary key identity(202100,2),
+pname varchar(30) not null,
+empid int constraint empid foreign key references employee(empid)
+)
+select * from product
+select * from employee;
+insert into product(pname,empid)values('Shubham','2002100'),('Ashish','2002102')
+select *from employee as a inner join product as b on a.empid=b.pid
+select * from product
+select * from employee;
