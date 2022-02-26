@@ -1,0 +1,35 @@
+CREATE DATABASE PROGRAM;
+
+USE PROGRAM;
+
+
+CREATE TABLE registration
+(
+id INT PRIMARY KEY NOT NULL IDENTITY(100,2),
+NAME VARCHAR(30) NOT NULL,
+MOBILE INT NOT NULL,
+EMAIL VARCHAR(30) UNIQUE,
+ADDRESS VARCHAR(100) 
+);
+
+
+SELECT * FROM registration;
+
+insert into registration(name,mobile,email,address) values('coder',98745,'coder@gmail.com','noida');
+SELECT * FROM registration;
+
+insert into registration(name,mobile,email,address) values('coder',98745,'coder1@gmail.com','noida');
+SELECT * FROM registration;
+
+
+insert into registration(name,mobile,email,address) values('aman',12345,'aman@gmail.com','noida'),('sivam',98746,'aivam@gmail.com','noida'),('shivam',98745,'shivam1@gmail.com','noida'),('manoj',9867,'manoj1@gmail.com','noida'),('kuji',987454,'kuji@gmail.com','noida'),('coder34',98745,'ASDF@gmail.com','noida'),('coder65',98745,'coder651@gmail.com','noida');
+SELECT * FROM registration;
+
+DELETE REGISTRATION WHERE ID=102;
+SELECT * FROM registration;
+
+DELETE REGISTRATION ;
+SELECT * FROM registration;
+
+TRUNCATE Table REGISTRATION;
+SELECT * FROM registration;
