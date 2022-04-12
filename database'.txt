@@ -1,0 +1,44 @@
+
+
+create database  wl
+
+use wl
+
+create table wlp(
+id int,
+name varchar(20),
+sal int
+
+)
+
+select * from wlp
+
+declare @del int =1
+
+ while (@del<=5)
+begin
+print @del
+set @del=@del+1
+end
+
+declare @dell int =1
+
+ while (@dell<=5)
+begin
+print 'chetu'
+set @dell=@dell+1
+end
+
+
+
+
+select max(sal) as big from wlp 
+
+select max(sal) from wlp where sal!= (select max(sal) as big from wlp)
+
+declare @delll int=1
+while (@delll<=10)
+begin
+print CONVERT(VARCHAR,@delll ) + '  Chetu  '
+set @delll=@delll+1
+end

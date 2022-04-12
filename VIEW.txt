@@ -1,0 +1,25 @@
+
+@using Microsoft.AspNetCore.Http
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+
+
+
+
+<h1>  @ViewBag.a </h1>
+
+<br>
+
+
+<h1>  @TempData["a1"]</h1>
+
+<br>
+<h1> @ViewData["b1"] </h1>
+
+
+<h1>Session</h1>
+
+
+<h1>@ViewBag.abc</h1>
+
+<h1>@HttpContextAccessor.HttpContext.Session.GetString("key")</h1>
